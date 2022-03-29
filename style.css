@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--Violet);
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.main {
+    padding: 3rem;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+
+.main .bottom {
+    display: flex;
+    padding-top: 4rem ;
+    height: 80%;
+}
+
+.main > img {
+    width: 14rem;
+}
+
+.main .bottom > .img {
+    flex: 1 1 55%;
+    overflow: hidden;
+}
+
+.main .bottom > .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main .bottom .content {
+    flex: 1 1 45%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .bottom .content h1 {
+    max-width: 35rem;
+    font-size: 2.8rem;
+}
+
+.main .bottom .content p {
+    margin-top: 1.5rem;
+    max-width: 35.5rem;
+    font-size: 1.12rem;
+    line-height: 2rem;
+}
+
+.main .bottom .content a {
+    display: block;
+    background-color: #fff;
+    width: fit-content;
+    padding: 0.8rem 4.5rem;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.63);
+    transition: 0.2s;
+}
+
+.main .bottom .content a:hover {
+    background-color: var(--Magenta);
+    color: #fff;
+}
+
+.main .bottom .content .img{
+    display:flex;
+    align-self:flex-end;
+}
+
+.main .bottom .content .img img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    /* background-color: rgb(0, 0, 0); */
+    padding: 0.5rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.main .bottom .content .img .item {
+    position: relative;
+}
+
+.main .bottom .content .img img:last-child {
+    border: 2px solid var(--Magenta);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s;
+    right: 0;
+    bottom: 0;
+}
+
+.main .bottom .content .img .item:hover img:last-child {
+    opacity: 1;
+}
+
+@media screen and (max-width:960px) {
+    .main .bottom {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+    body {
+        height:max-content;
+        overflow: auto;
+        background-image: url(./images/bg-mobile.svg);
+        background-position-y:top ;
+        background-size:100% ;
+    }
+    .main .bottom .content {
+        text-align: center;
+        padding: 6rem 0 0 0;
+    }
+    .main .bottom .content .text a {
+        margin: auto;
+        margin-top: 1.5rem;
+        padding: 0.8rem 5rem;
+    }
+    .main {
+        padding: 2rem;
+    }
+    .main > img {
+        width: 8rem;
+    }
+    html {
+        font-size: 75%;
+    }
+    .main .bottom .content h1 {
+        font-size: 2rem;
+        width: 90%;
+        margin: auto;
+    }
+    .main .bottom .content p {
+        width: 85%;
+        margin: auto;
+        padding-top: 2rem;
+    }
+    .main .bottom .content .img{
+        margin-top: 5rem;
+        align-self:center;
+    }
+}
